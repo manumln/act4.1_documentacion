@@ -6,6 +6,7 @@
  */
 package ies;
 
+//Atributos de la clase
 public class Empleado {
 	private int emp_no;
 	private String nombre;
@@ -14,6 +15,14 @@ public class Empleado {
 	private String oficio;
 	private Double salario;
 
+	/**
+	* @param emp_no  Codigo identificador del empleado.
+ 	* @param nombre  Nombre del empleado.
+ 	* @param apellido  Apellido del empleado.
+ 	* @param pobla  Ciudad del emplead.
+ 	* @param oficio  Oficio del empleado.
+ 	* @param salario  Salario del empleado.
+ 	**/
 	public Empleado(int emp_no, String nombre, String apellido, String pobla, String oficio,
 			Double salario) {
 		this.emp_no = emp_no;
@@ -28,21 +37,38 @@ public class Empleado {
 		this.emp_no = emp_no;
 		this.nombre = nombre;
 		this.salario = salario;
-		this.dept = dept;
 	}
 
+	/**
+	 * Retorna el código identificador del empleado.
+	 *
+	 * @return El codigo identificador del empleado.
+	 */
 	public int getEmp_no() {
 		return emp_no;
 	}
 
+	/**
+	 * Establece el codigo identificador del empleado.
+	 *
+	 * @param emp_no
+	 */
 	public void setEmp_no(int emp_no) {
 		this.emp_no = emp_no;
 	}
-
+	/**
+	 * Retorna el nombre del empleado
+	 *
+	 * @return Nombre del empleado
+	 */
 	public String getNombre() {
 		return nombre;
 	}
-
+	/**
+	 * Introduce el nombre del empleado
+	 *
+	 * @param nombre  Nombre del empleado
+	 */
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
@@ -74,7 +100,6 @@ public class Empleado {
 	public void subidasalario(Double subida) {
 		salario = salario + subida;
 	}
-	
 	private boolean comprobar(){
 		if (nombre.equals("")){
 			
